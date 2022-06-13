@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
 
-        <h1>Exercice 0</h1>
+<head>
+    <meta charset="utf-8">
+</head>
 
-        <script type="text/javascript">
+<body>
 
-        /* Section 1 */   
+    <h1>Exercice 0</h1>
 
+    <script type="text/javascript">
+        /* Section 1 */
+
+        // Déclaration de variables
         var name = "Joe";
         var city = 'London';
         var age = 32;
         var isRed = true;
         var isOld = age > 80;
-
         var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
 
+        // Fonction pour vérifier la taille et le poids
+        // paramètre : taille et poids
         function info(height, weight) {
             if (height > 180) {
                 console.log('Vous êtes grand');
             }
             if (weight < 0) {
                 console.log('oups, there is a problem');
-            } else if ( weight < 15) {
+            } else if (weight < 15) {
                 console.log('Are you that slim ?')
             } else {
                 console.log('Good !')
             }
         }
 
+        // appel de la fonction avec rentrée manuelle d'informations (taille et poids)
         info(165, 45);
 
+        // Déclaration de variables taille et poids
         var myHeight = 175;
         var myWeight = 86;
 
+
+        // appel de la fonction. Utilisation de variables pour la taille et le poids
         info(myHeight, myWeight);
 
+        // appel de la fonction. Utilisation de variables pour la taille et le poids
+        // ajout de 15 à la taille et soustraction de 100 au poids
         info(myHeight + 15, myWeight - 100);
 
+        // Fonction pour mettre la variable en majuscules
         function toUpper(variable) {
             return variable.toUpperCase();
         }
 
+        // Déclaration de la variable et insertion de name en majuscule
         var upperName = toUpper(name);
 
+        // Boucle d'affichage des boulots précédents
         for (i = 0; i < 3; i = i + 1) {
             console.log(previousJobs[i]);
         }
@@ -54,14 +66,21 @@
         /* Section 2: */
 
         // afficher la ville dans laquele Joe vit.     
+        console.log(`Joe vit dans la ville de ${city}`)
 
         // afficher si Joe est roux ou pas.
+        if (isRed) {
+            console.log('Joe est roux')
+        } else {
+            console.log("Joe n'est pas roux")
+        }
 
         /* Section 3 */
 
+        // Cette variable n'existe pas !!
         // console.log(myVariable);
+    </script>
 
-        </script>
+</body>
 
-    </body>
 </html>
